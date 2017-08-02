@@ -39,8 +39,10 @@ for (var j = 0; j < operatorButton.length; j++) {
 function pushNumber(numbers){
   if (isOperator == false) {
     numOne += numbers;
+    answerBox.textContent = numOne;
   } else if (isOperator == true) {
     numTwo += numbers;
+    answerBox.textContent = numTwo;
   }
  // numberOperation += numbers;
  console.log(numOne, numTwo);
@@ -60,14 +62,14 @@ answerBox.textContent = 'Clear';
 //This is the logic for the equal button.
 equalButton.addEventListener("click", function(){
 
-  var x = numOne;
-  var y = numTwo;
+  var x = parseInt(numOne);
+  var y = parseInt(numTwo);
 
 
   console.log('x', x, 'y', y);
   if (operatorSymbol == "+") {
     var answer = x + y;
-  } else if (operatorSymbol == "-"){
+  } else if (operatorSymbol == "−"){
     var answer = x - y;
   } else if (operatorSymbol == "*"){
     var answer = x * y;
@@ -91,6 +93,13 @@ function answerAndClearVars(answers){
   numOne = '';
   numTwo = '';
 }
+
+//STUFF TO DO:
+//Try to figure out how to deal with negative numbers,
+//style it - A LOT
+//figure out how to do something like 3 + 5 + 9 = 17
+
+
 
 
 

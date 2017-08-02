@@ -1,6 +1,5 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 $grid-gutter-width: 0;
-
 //colors
 $buttonpressed: #4E81D1;
 $black: #000000;
@@ -15,18 +14,18 @@ h1{
   display: inline-block;
   text-align: center;
   font-size: 30px;
-  margin: auto;
-  padding-left: 35%;
+  margin: 0;
+  padding-left: 420px;
 }
 
 button{
   width: 50px;
   height: 50px;
   padding: 0;
+}
 
-  &:active{
-    background-color: $buttonpressed;
-  }
+button:active{
+  background-color: $buttonpressed;
 }
 
 #answer-area{
